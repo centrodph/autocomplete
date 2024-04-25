@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+.autocomplete-wrapper {
+  & input {
+    padding: 3px 5px;
+    border: solid 1px #ccc;
+    width: 100%;
+  }
+}

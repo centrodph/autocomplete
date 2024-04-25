@@ -1,0 +1,9 @@
+{
+  "name": "menuitem",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/menuitem/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project menuitem --web",
+  "targets": {}
+}

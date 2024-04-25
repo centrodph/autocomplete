@@ -1,0 +1,16 @@
+{
+  "name": "@centrodphlibs/menuitem",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  },
+  "scripts": {
+    "build": "nx build",
+    "test": "nx test"
+  }
+}
