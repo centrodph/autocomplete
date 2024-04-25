@@ -1,7 +1,8 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.container {
+  position: absolute;
+  background: white;
+  border-radius: 2px;
+  border: solid 1px lightgray;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}

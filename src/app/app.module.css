@@ -1,0 +1,40 @@
+.layout-wrapper {
+  display: grid;
+  width: 100dvw;
+  height: 100dvh;
+  grid-template-areas:
+    'topLeft topRight'
+    'bottomLeft bottomRight';
+}
+
+.layout-top-left,
+.layout-top-right,
+.layout-bottom-left,
+.layout-bottom-right {
+  padding: 1rem;
+  display: flex;
+}
+
+.layout-top-left {
+  grid-area: topLeft;
+  background-color: aqua;
+}
+
+.layout-top-right {
+  grid-area: topRight;
+  background-color: burlywood;
+  justify-content: flex-end;
+}
+
+.layout-bottom-left {
+  grid-area: bottomLeft;
+  background-color: cadetblue;
+  align-items: flex-end;
+}
+
+.layout-bottom-right {
+  grid-area: bottomRight;
+  background-color: chocolate;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
