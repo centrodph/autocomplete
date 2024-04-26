@@ -18,6 +18,8 @@
 .layout-top-left {
   grid-area: topLeft;
   background-color: aqua;
+  display: flex;
+  flex-direction: column;
 }
 
 .layout-top-right {
@@ -37,4 +39,12 @@
   background-color: chocolate;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+.layout-error {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: red;
+  background-color: white;
 }

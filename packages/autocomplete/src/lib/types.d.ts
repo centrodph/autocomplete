@@ -8,5 +8,7 @@ export declare namespace AutocompleteNamespace {
     options: MenuItemNamespace.MenuOption[] | null;
     onSelect: (item: AutocompleteOption) => void;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    search?: string;
+    isLoading?: boolean;
   }
 }

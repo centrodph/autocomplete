@@ -1,11 +1,11 @@
 .menu-box-popup {
-  position: absolute;
+  position: fixed;
   background: white;
   border-radius: 2px;
   border: solid 1px lightgray;
   margin-top: 2px;
   margin-bottom: 2px;
-
+  overflow: auto;
   &:last-child {
     border-bottom: none;
   }
