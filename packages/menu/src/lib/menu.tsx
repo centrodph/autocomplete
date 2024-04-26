@@ -1,30 +1,29 @@
 import { MenuNamespace } from './types';
 import styles from './menu.module.css';
+import { Menuitem } from '@centrodphlibs/menuitem';
+import { useMenu } from './useMenu';
 
 export function Menu(props: MenuNamespace.MenuProps) {
-  const { isOpen, triggerRef } = props;
-  if (isOpen) return null;
-
+  const { triggerRef, options } = props;
+  const { valueToOpen, isOpen, hasOptions, width, positionToOpen } =
+    useMenu(props);
+  if (!isOpen) return null;
   if (!triggerRef.current) return null;
-
-  const { innerHeight } = window;
-  const { top, width, bottom } = triggerRef.current.getBoundingClientRect();
-
-  const remainingSpaceTop = top;
-  const remainingSpaceBottom = innerHeight - bottom;
-  const positionToOpen =
-    remainingSpaceTop > remainingSpaceBottom ? 'bottom' : 'top';
-  const valueToOpen = positionToOpen === 'top' ? bottom : innerHeight - top;
 
   return (
     <div
-      className={`${styles['container']} ${styles[positionToOpen]}`}
+      className={`${styles['menu-box-popup']}`}
       style={{
         [positionToOpen]: valueToOpen,
         width,
       }}
+      role="listbox"
     >
-      <p>positionToOpen = {positionToOpen}</p>
+      {hasOptions ? (
+        options?.map((option) => <Menuitem key={option.value} {...option} />)
+      ) : (
+        <Menuitem label="No options available" value="" />
+      )}
     </div>
   );
 }

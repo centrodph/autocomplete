@@ -1,7 +1,4 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.menu-item {
+  border-bottom: solid 1px lightgray;
+  padding: 0.2rem 0.5rem;
+}

@@ -9,7 +9,7 @@ export const useAutocomplete = (
   const [mounted, setMounted] = React.useState(false);
   const inputRef = React.useRef<HTMLInputElement>(null);
   const isOpen = React.useMemo(
-    () => !!options?.length && mounted,
+    () => mounted && !!options && options.length > 0,
     [options, mounted]
   );
   React.useEffect(() => {
