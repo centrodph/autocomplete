@@ -1,4 +1,4 @@
-import { MenuItemNamespace } from 'packages/menuitem/src/lib/types';
+import type { MenuItemNamespace } from '@centrodphlibs/menuitem';
 import React from 'react';
 
 export declare namespace AutocompleteNamespace {

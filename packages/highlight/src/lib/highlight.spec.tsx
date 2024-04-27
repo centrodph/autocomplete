@@ -4,7 +4,9 @@ import Highlight from './highlight';
 
 describe('Highlight', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Highlight />);
+    const { baseElement } = render(
+      <Highlight text="Lorem ipsum" selection="ip" />
+    );
     expect(baseElement).toBeTruthy();
   });
 });
