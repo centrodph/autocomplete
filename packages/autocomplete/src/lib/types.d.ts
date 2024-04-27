@@ -6,7 +6,7 @@ export declare namespace AutocompleteNamespace {
   export interface AutocompleteProps {
     className?: string;
     options: MenuItemNamespace.MenuOption[] | null;
-    onSelect: (item: AutocompleteOption) => void;
+    onSelection: (item: AutocompleteOption) => void;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
     search?: string;
     isLoading?: boolean;

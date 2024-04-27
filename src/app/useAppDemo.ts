@@ -49,13 +49,19 @@ export const useAppDemo = () => {
     []
   );
 
+  const onSelection = React.useCallback<
+    AutocompleteNamespace.AutocompleteProps['onSelection']
+  >((option) => {
+    setSelectedOption(option);
+  }, []);
+
   return {
     isLoading,
     error,
     options,
     selectedOption,
     search,
-    setSelectedOption,
+    onSelection,
     onSearch,
   };
 };

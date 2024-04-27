@@ -1,19 +1,24 @@
+import React from 'react';
 import { MenuItemNamespace } from './types';
 import styles from './menuitem.module.css';
 
-export const Menuitem = (props: MenuItemNamespace.MenuOption) => {
-  const { label, value, selected, ...rest } = props;
+export const Menuitem = React.forwardRef<
+  HTMLDivElement,
+  MenuItemNamespace.MenuOptionProps
+>((props: MenuItemNamespace.MenuOptionProps, ref) => {
+  const { value, selected, children, ...rest } = props;
   return (
     <div
       className={styles['menu-item']}
       {...rest}
-      tabIndex={0}
+      tabIndex={-1}
       role="option"
       aria-selected={selected}
+      ref={ref}
     >
-      {label}
+      {children}
     </div>
   );
-};
+});
 
 export default Menuitem;

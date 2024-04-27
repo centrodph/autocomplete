@@ -4,8 +4,15 @@ import { Autocomplete } from '@centrodphlibs/autocomplete';
 import { useAppDemo } from './useAppDemo';
 
 export function App() {
-  const { options, setSelectedOption, onSearch, search, error, isLoading } =
-    useAppDemo();
+  const {
+    options,
+    onSelection,
+    onSearch,
+    search,
+    error,
+    isLoading,
+    selectedOption,
+  } = useAppDemo();
 
   return (
     <>
@@ -16,17 +23,22 @@ export function App() {
             options={options}
             search={search}
             onChange={onSearch}
-            onSelect={setSelectedOption}
+            onSelection={onSelection}
             isLoading={isLoading}
           />
+          <p>
+            Selected option:{' '}
+            {selectedOption ? JSON.stringify(selectedOption) : ' not selected'}
+          </p>
         </div>
         <div className={styles['layout-top-right']}>
           <div style={{ width: 220 }}>
+            <p>Only 10 options</p>
             <Autocomplete
               options={options?.slice(0, 10) ?? null}
               search={search}
               onChange={onSearch}
-              onSelect={setSelectedOption}
+              onSelection={onSelection}
               isLoading={isLoading}
             />
           </div>
@@ -36,16 +48,17 @@ export function App() {
             options={options?.slice(0, 10) ?? null}
             search={search}
             onChange={onSearch}
-            onSelect={setSelectedOption}
+            onSelection={onSelection}
             isLoading={isLoading}
           />
+          <p>Only 10 options</p>
         </div>
         <div className={styles['layout-bottom-right']}>
           <Autocomplete
             options={options}
             search={search}
             onChange={onSearch}
-            onSelect={setSelectedOption}
+            onSelection={onSelection}
             isLoading={isLoading}
           />
         </div>

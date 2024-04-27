@@ -3,6 +3,9 @@
   padding: 0.2rem 0.5rem;
   cursor: pointer;
   &:hover {
+    background-color: rgba(11, 176, 222, 0.1);
+  }
+  &[aria-selected='true'] {
     background-color: rgba(11, 176, 222, 0.3);
   }
 }

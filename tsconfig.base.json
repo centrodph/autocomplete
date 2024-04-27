@@ -17,6 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@centrodphlibs/autocomplete": ["packages/autocomplete/src/index.ts"],
+      "@centrodphlibs/highlight": ["packages/highlight/src/index.ts"],
       "@centrodphlibs/menu": ["packages/menu/src/index.ts"],
       "@centrodphlibs/menuitem": ["packages/menuitem/src/index.ts"]
     }

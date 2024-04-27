@@ -6,9 +6,7 @@ export const parseSearchResponseToOption = (
 ): MenuItemNamespace.MenuOption[] => {
   return searchResult.docs.map((doc) => {
     return {
-      label: `${doc.title} - ${doc.author_name?.join(
-        ','
-      )}`,
+      label: `${doc.title} - ${doc.author_name?.join(',') ?? 'Unknown author'}`,
       value: doc.key,
     };
   });
