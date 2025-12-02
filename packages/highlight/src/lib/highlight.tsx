@@ -1,4 +1,4 @@
-import styles from './highlight.module.css';
+import * as styles from './highlight.css';
 import type { HighlightNamespace } from './types';
 
 export function Highlight(props: HighlightNamespace.HighlightProps) {
@@ -7,7 +7,7 @@ export function Highlight(props: HighlightNamespace.HighlightProps) {
   const textArray = String(props.text).split(search);
   return textArray.map((part) =>
     part.toLocaleLowerCase() === props.selection.toLocaleLowerCase() ? (
-      <span className={styles['highlight']}>{part}</span>
+      <span className={styles.highlight}>{part}</span>
     ) : (
       `${part}`
     )

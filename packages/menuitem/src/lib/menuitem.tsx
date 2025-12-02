@@ -1,6 +1,6 @@
 import React from 'react';
 import { MenuItemNamespace } from './types';
-import styles from './menuitem.module.css';
+import * as styles from './menuitem.css';
 
 export const Menuitem = React.forwardRef<
   HTMLDivElement,
@@ -9,7 +9,7 @@ export const Menuitem = React.forwardRef<
   const { value, selected, children, ...rest } = props;
   return (
     <div
-      className={styles['menu-item']}
+      className={styles.menuItem}
       {...rest}
       tabIndex={-1}
       role="option"

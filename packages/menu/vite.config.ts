@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
 import * as path from 'path';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
@@ -11,6 +12,7 @@ export default defineConfig({
 
   plugins: [
     react(),
+    vanillaExtractPlugin(),
     nxViteTsPaths(),
     dts({
       entryRoot: 'src',
@@ -42,8 +44,18 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      external: ['react', 'react-dom', 'react/jsx-runtime', '@vanilla-extract/css'],
+      output: {
+        // Ensure CSS is extracted and included
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'style.css') {
+            return 'style.css';
+          }
+          return assetInfo.name || 'asset';
+        },
+      },
     },
+    cssCodeSplit: false, // Bundle all CSS into a single file
   },
 
   test: {

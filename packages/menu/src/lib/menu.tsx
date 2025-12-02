@@ -1,7 +1,7 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom';
 import { MenuNamespace } from './types';
-import styles from './menu.module.css';
+import * as styles from './menu.css';
 import { useMenu } from './useMenu';
 
 export const Menu = React.forwardRef<HTMLDivElement, MenuNamespace.MenuProps>(
@@ -15,7 +15,7 @@ export const Menu = React.forwardRef<HTMLDivElement, MenuNamespace.MenuProps>(
     return ReactDOM.createPortal(
       <div
         ref={ref}
-        className={`${styles['menu-box-popup']}`}
+        className={styles.menuBoxPopup}
         style={{
           [positionToOpen]: valueToOpen,
           width,

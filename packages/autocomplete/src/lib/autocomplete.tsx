@@ -1,4 +1,4 @@
-import styles from './autocomplete.module.css';
+import * as styles from './autocomplete.css';
 import type { AutocompleteNamespace } from './types';
 import { useAutocomplete } from './useAutocomplete';
 import { Menu } from '@centrodphlibs/menu';
@@ -22,7 +22,7 @@ export function Autocomplete(props: AutocompleteNamespace.AutocompleteProps) {
   } = useAutocomplete(props);
   return (
     <div
-      className={`${styles['autocomplete-wrapper']} ${className ?? ''}`}
+      className={`${styles.autocompleteWrapper} ${className ?? ''}`}
       onFocus={onFocus}
       onBlur={onBlur}
       onKeyDown={onKeyDown}
@@ -59,8 +59,8 @@ export function Autocomplete(props: AutocompleteNamespace.AutocompleteProps) {
         )}
       </Menu>
       <div
-        className={`${styles['autocomplete-loader']} ${
-          isLoading ? styles['active'] : styles['hidden']
+        className={`${styles.autocompleteLoader} ${
+          isLoading ? styles.active : styles.hidden
         }`}
       />
     </div>
