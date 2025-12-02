@@ -43,7 +43,17 @@ export default defineConfig({
     rollupOptions: {
       // External packages that should not be bundled into your library.
       external: ['react', 'react-dom', 'react/jsx-runtime'],
+      output: {
+        // Ensure CSS is extracted and included
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'style.css') {
+            return 'style.css';
+          }
+          return assetInfo.name || 'asset';
+        },
+      },
     },
+    cssCodeSplit: false, // Bundle all CSS into a single file
   },
 
   test: {

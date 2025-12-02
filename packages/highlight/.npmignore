@@ -1,0 +1,40 @@
+# Source files
+src/
+tsconfig*.json
+vite.config.ts
+project.json
+
+# Test files
+*.spec.tsx
+*.test.tsx
+*.cy.ts
+coverage/
+
+# Development files
+.eslintrc.json
+eslint.config.js
+.prettierrc
+.prettierignore
+
+# Build artifacts (keep only the built files)
+node_modules/
+.vite/
+
+# Documentation (README.md is included via files field in package.json)
+# README.md
+
+# Git files
+.git/
+.gitignore
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+

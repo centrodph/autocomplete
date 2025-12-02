@@ -7,7 +7,14 @@
     "build": "nx build",
     "build:all": "nx run-many -t build",
     "test": "nx test",
-    "test:all": "nx run-many -t test"
+    "test:all": "nx run-many -t test",
+    "prepare:publish": "node scripts/prepare-publish.js",
+    "publish:autocomplete": "npm run prepare:publish && cd dist/packages/autocomplete && npm publish --access public",
+    "publish:highlight": "npm run prepare:publish && cd dist/packages/highlight && npm publish --access public",
+    "publish:menu": "npm run prepare:publish && cd dist/packages/menu && npm publish --access public",
+    "publish:menuitem": "npm run prepare:publish && cd dist/packages/menuitem && npm publish --access public",
+    "publish:all": "npm run build:all && npm run prepare:publish && npm run publish:autocomplete && npm run publish:highlight && npm run publish:menu && npm run publish:menuitem",
+    "prepublishOnly": "npm run build:all && npm run prepare:publish"
   },
   "private": true,
   "dependencies": {
