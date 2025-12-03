@@ -1,6 +1,6 @@
 {
   "name": "@centrodphlibs/menuitem",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React menu item component library",
   "keywords": [
     "react",
@@ -24,14 +24,12 @@
       "import": "./index.mjs",
       "require": "./index.js",
       "types": "./index.d.ts"
-    },
-    "./style.css": "./style.css"
+    }
   },
   "files": [
     "index.js",
     "index.mjs",
     "index.d.ts",
-    "style.css",
     "README.md"
   ],
   "peerDependencies": {

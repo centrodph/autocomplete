@@ -10,7 +10,7 @@ npm install @centrodphlibs/autocomplete
 
 ## Usage
 
-CSS is **automatically included** when you import the component! No need to import CSS separately.
+Simply import the component - **CSS styles are automatically injected**! No need to import CSS separately.
 
 ```tsx
 import { Autocomplete } from '@centrodphlibs/autocomplete';
@@ -28,7 +28,7 @@ function App() {
 }
 ```
 
-That's it! The styles are automatically injected when you import the component. Works in Vite, Webpack, and other bundlers, including Stackblitz.
+That's it! The styles are automatically injected when you import the component. Works in all modern environments including Vite, Webpack, Parcel, and even in browser environments without a bundler.
 
 ## Running unit tests
 

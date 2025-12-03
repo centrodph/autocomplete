@@ -100,6 +100,13 @@ npm version patch  # or minor, or major
    - `index.d.ts` (TypeScript definitions)
    - `README.md`
 
+5. **CSS Auto-Injection**: CSS styles are automatically injected into the JavaScript bundle. Consumers don't need to import CSS separately - just import the component:
+   ```tsx
+   import { Autocomplete } from '@centrodphlibs/autocomplete';
+   // CSS is automatically injected - no need to import CSS!
+   ```
+   The CSS is bundled into the JavaScript files and automatically injected into the DOM when the module is loaded.
+
 ## Troubleshooting
 
 ### Authentication Errors
