@@ -1,0 +1,49 @@
+{
+  "name": "@centrodphlibs/button-linaria",
+  "version": "0.0.1",
+  "description": "React button component library using Linaria",
+  "keywords": [
+    "react",
+    "button",
+    "component",
+    "ui",
+    "typescript",
+    "linaria"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./style.css": "./style.css"
+  },
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "style.css",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "nx build button-linaria",
+    "test": "nx test button-linaria"
+  }
+}
+

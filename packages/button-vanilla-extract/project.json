@@ -1,0 +1,10 @@
+{
+  "name": "button-vanilla-extract",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/button-vanilla-extract/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project button-vanilla-extract --web",
+  "targets": {}
+}
+

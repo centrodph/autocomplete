@@ -10,7 +10,15 @@
           "error",
           {
             "enforceBuildableLibDependency": true,
-            "allow": [],
+            "allow": [
+              "@centrodphlibs/autocomplete",
+              "@centrodphlibs/highlight",
+              "@centrodphlibs/menu",
+              "@centrodphlibs/menuitem",
+              "@centrodphlibs/button-vanilla-extract",
+              "@centrodphlibs/button-linaria",
+              "@centrodphlibs/button-css-modules"
+            ],
             "depConstraints": [
               {
                 "sourceTag": "*",
