@@ -4,10 +4,10 @@
 
 ## Setup the application
 
-Run `npm install` to install the dependencies.
+Run `pnpm install` to install the dependencies.
 
 ## Start the application
 
-Run `npx nx serve` to start the development server. Happy coding!
+Run `pnpm run start` to start the development server. Happy coding!
 
 <img src="./public/graph.1.png" />
