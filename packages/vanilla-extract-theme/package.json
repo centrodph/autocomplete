@@ -34,7 +34,7 @@
     "README.md"
   ],
   "peerDependencies": {
-    "@centrodphlibs/theme": "^0.0.1",
+    "@centrodphlibs/theme": "workspace:*",
     "@vanilla-extract/css": "^1.0.0"
   },
   "publishConfig": {

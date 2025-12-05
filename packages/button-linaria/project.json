@@ -4,7 +4,6 @@
   "sourceRoot": "packages/button-linaria/src",
   "projectType": "library",
   "tags": [],
-  "// targets": "to see all targets run: nx show project button-linaria --web",
   "targets": {}
 }
 

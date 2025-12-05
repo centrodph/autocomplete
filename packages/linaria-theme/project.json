@@ -4,7 +4,6 @@
   "sourceRoot": "packages/linaria-theme/src",
   "projectType": "library",
   "tags": [],
-  "// targets": "to see all targets run: nx show project linaria-theme --web",
   "targets": {}
 }
 
