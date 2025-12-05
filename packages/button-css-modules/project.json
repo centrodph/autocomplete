@@ -4,6 +4,10 @@
   "sourceRoot": "packages/button-css-modules/src",
   "projectType": "library",
   "tags": [],
-  "targets": {}
+  "targets": {
+    "build": {
+      "dependsOn": ["^build"],
+      "cache": true
+    }
+  }
 }
-

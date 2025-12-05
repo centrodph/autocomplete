@@ -1,0 +1,739 @@
+{
+  "graph": {
+    "nodes": {
+      "button-vanilla-extract": {
+        "name": "button-vanilla-extract",
+        "type": "lib",
+        "data": {
+          "root": "packages/button-vanilla-extract",
+          "name": "button-vanilla-extract",
+          "targets": {
+            "build": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "build"
+              },
+              "configurations": {}
+            },
+            "test": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test"
+              },
+              "configurations": {}
+            },
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "serve": {
+              "options": {
+                "cwd": "packages/button-vanilla-extract",
+                "command": "vite serve"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "preview": {
+              "options": {
+                "cwd": "packages/button-vanilla-extract",
+                "command": "vite preview"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "build",
+                "spa": true
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "cache": true,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.base.json",
+                "{workspaceRoot}/.eslintrc.json",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "packages/button-vanilla-extract",
+                "command": "eslint ."
+              },
+              "configurations": {}
+            }
+          },
+          "sourceRoot": "packages/button-vanilla-extract/src",
+          "projectType": "library",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "vanilla-extract-theme": {
+        "name": "vanilla-extract-theme",
+        "type": "lib",
+        "data": {
+          "root": "packages/vanilla-extract-theme",
+          "name": "vanilla-extract-theme",
+          "targets": {
+            "build": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "build"
+              },
+              "configurations": {}
+            },
+            "test": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test"
+              },
+              "configurations": {}
+            },
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "serve": {
+              "options": {
+                "cwd": "packages/vanilla-extract-theme",
+                "command": "vite serve"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "preview": {
+              "options": {
+                "cwd": "packages/vanilla-extract-theme",
+                "command": "vite preview"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "build",
+                "spa": true
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "cache": true,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.base.json",
+                "{workspaceRoot}/.eslintrc.json",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "packages/vanilla-extract-theme",
+                "command": "eslint ."
+              },
+              "configurations": {}
+            }
+          },
+          "sourceRoot": "packages/vanilla-extract-theme/src",
+          "projectType": "library",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "button-css-modules": {
+        "name": "button-css-modules",
+        "type": "lib",
+        "data": {
+          "root": "packages/button-css-modules",
+          "name": "button-css-modules",
+          "targets": {
+            "build": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "build"
+              },
+              "configurations": {}
+            },
+            "test": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test"
+              },
+              "configurations": {}
+            },
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "serve": {
+              "options": {
+                "cwd": "packages/button-css-modules",
+                "command": "vite serve"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "preview": {
+              "options": {
+                "cwd": "packages/button-css-modules",
+                "command": "vite preview"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "build",
+                "spa": true
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "cache": true,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.base.json",
+                "{workspaceRoot}/.eslintrc.json",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "packages/button-css-modules",
+                "command": "eslint ."
+              },
+              "configurations": {}
+            }
+          },
+          "sourceRoot": "packages/button-css-modules/src",
+          "projectType": "library",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "css-modules-theme": {
+        "name": "css-modules-theme",
+        "type": "lib",
+        "data": {
+          "root": "packages/css-modules-theme",
+          "name": "css-modules-theme",
+          "targets": {
+            "build": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "build"
+              },
+              "configurations": {}
+            },
+            "test": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test"
+              },
+              "configurations": {}
+            },
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "serve": {
+              "options": {
+                "cwd": "packages/css-modules-theme",
+                "command": "vite serve"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "preview": {
+              "options": {
+                "cwd": "packages/css-modules-theme",
+                "command": "vite preview"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "build",
+                "spa": true
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "cache": true,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.base.json",
+                "{workspaceRoot}/.eslintrc.json",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "packages/css-modules-theme",
+                "command": "eslint ."
+              },
+              "configurations": {}
+            }
+          },
+          "sourceRoot": "packages/css-modules-theme/src",
+          "projectType": "library",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "button-linaria": {
+        "name": "button-linaria",
+        "type": "lib",
+        "data": {
+          "root": "packages/button-linaria",
+          "name": "button-linaria",
+          "targets": {
+            "build": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "build"
+              },
+              "configurations": {}
+            },
+            "test": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test"
+              },
+              "configurations": {}
+            },
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "serve": {
+              "options": {
+                "cwd": "packages/button-linaria",
+                "command": "vite serve"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "preview": {
+              "options": {
+                "cwd": "packages/button-linaria",
+                "command": "vite preview"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "build",
+                "spa": true
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "cache": true,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.base.json",
+                "{workspaceRoot}/.eslintrc.json",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "packages/button-linaria",
+                "command": "eslint ."
+              },
+              "configurations": {}
+            }
+          },
+          "sourceRoot": "packages/button-linaria/src",
+          "projectType": "library",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "linaria-theme": {
+        "name": "linaria-theme",
+        "type": "lib",
+        "data": {
+          "root": "packages/linaria-theme",
+          "name": "linaria-theme",
+          "targets": {
+            "build": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "build"
+              },
+              "configurations": {}
+            },
+            "test": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test"
+              },
+              "configurations": {}
+            },
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "serve": {
+              "options": {
+                "cwd": "packages/linaria-theme",
+                "command": "vite serve"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "preview": {
+              "options": {
+                "cwd": "packages/linaria-theme",
+                "command": "vite preview"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "build",
+                "spa": true
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "cache": true,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.base.json",
+                "{workspaceRoot}/.eslintrc.json",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "packages/linaria-theme",
+                "command": "eslint ."
+              },
+              "configurations": {}
+            }
+          },
+          "sourceRoot": "packages/linaria-theme/src",
+          "projectType": "library",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "theme": {
+        "name": "theme",
+        "type": "lib",
+        "data": {
+          "root": "packages/theme",
+          "name": "theme",
+          "targets": {
+            "build": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "build"
+              },
+              "configurations": {}
+            },
+            "test": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test"
+              },
+              "configurations": {}
+            },
+            "nx-release-publish": {
+              "dependsOn": [
+                "^nx-release-publish"
+              ],
+              "executor": "@nx/js:release-publish",
+              "options": {},
+              "configurations": {}
+            },
+            "serve": {
+              "options": {
+                "cwd": "packages/theme",
+                "command": "vite serve"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "preview": {
+              "options": {
+                "cwd": "packages/theme",
+                "command": "vite preview"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "build",
+                "spa": true
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "cache": true,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.base.json",
+                "{workspaceRoot}/.eslintrc.json",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "packages/theme",
+                "command": "eslint ."
+              },
+              "configurations": {}
+            }
+          },
+          "sourceRoot": "packages/theme/src",
+          "projectType": "library",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "app": {
+        "name": "app",
+        "type": "app",
+        "data": {
+          "root": "packages/app",
+          "name": "app",
+          "targets": {
+            "dev": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "dev"
+              },
+              "configurations": {}
+            },
+            "build": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "build"
+              },
+              "configurations": {}
+            },
+            "preview": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "preview"
+              },
+              "configurations": {}
+            },
+            "test": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test"
+              },
+              "configurations": {}
+            },
+            "serve": {
+              "options": {
+                "cwd": "packages/app",
+                "command": "vite serve"
+              },
+              "executor": "nx:run-commands",
+              "configurations": {}
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "build",
+                "spa": true
+              },
+              "configurations": {}
+            },
+            "lint": {
+              "cache": true,
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/.eslintrc.base.json",
+                "{workspaceRoot}/.eslintrc.json",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "executor": "nx:run-commands",
+              "options": {
+                "cwd": "packages/app",
+                "command": "eslint ."
+              },
+              "configurations": {}
+            }
+          },
+          "sourceRoot": "packages/app/src",
+          "projectType": "application",
+          "$schema": "../../node_modules/nx/schemas/project-schema.json",
+          "tags": [],
+          "implicitDependencies": []
+        }
+      },
+      "@centrodphlibs/source": {
+        "name": "@centrodphlibs/source",
+        "type": "lib",
+        "data": {
+          "root": ".",
+          "sourceRoot": ".",
+          "name": "@centrodphlibs/source",
+          "projectType": "library",
+          "includedScripts": [],
+          "targets": {},
+          "implicitDependencies": [],
+          "tags": []
+        }
+      }
+    },
+    "dependencies": {
+      "button-vanilla-extract": [
+        {
+          "source": "button-vanilla-extract",
+          "target": "vanilla-extract-theme",
+          "type": "static"
+        }
+      ],
+      "vanilla-extract-theme": [
+        {
+          "source": "vanilla-extract-theme",
+          "target": "theme",
+          "type": "static"
+        }
+      ],
+      "button-css-modules": [
+        {
+          "source": "button-css-modules",
+          "target": "css-modules-theme",
+          "type": "static"
+        }
+      ],
+      "css-modules-theme": [
+        {
+          "source": "css-modules-theme",
+          "target": "theme",
+          "type": "static"
+        }
+      ],
+      "button-linaria": [
+        {
+          "source": "button-linaria",
+          "target": "linaria-theme",
+          "type": "static"
+        }
+      ],
+      "linaria-theme": [
+        {
+          "source": "linaria-theme",
+          "target": "theme",
+          "type": "static"
+        }
+      ],
+      "theme": [],
+      "app": [
+        {
+          "source": "app",
+          "target": "button-vanilla-extract",
+          "type": "static"
+        },
+        {
+          "source": "app",
+          "target": "button-linaria",
+          "type": "static"
+        },
+        {
+          "source": "app",
+          "target": "button-css-modules",
+          "type": "static"
+        }
+      ],
+      "@centrodphlibs/source": []
+    }
+  },
+  "affectedProjects": [],
+  "criticalPath": []
+}

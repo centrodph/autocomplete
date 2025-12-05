@@ -4,6 +4,11 @@
   "sourceRoot": "packages/theme/src",
   "projectType": "library",
   "tags": [],
-  "targets": {}
+  "targets": {
+    "build": {
+      "dependsOn": ["^build"],
+      "cache": true
+    }
+  }
 }
 

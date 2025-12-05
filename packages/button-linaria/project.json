@@ -4,6 +4,11 @@
   "sourceRoot": "packages/button-linaria/src",
   "projectType": "library",
   "tags": [],
-  "targets": {}
+  "targets": {
+    "build": {
+      "dependsOn": ["^build"],
+      "cache": true
+    }
+  }
 }
 
