@@ -40,7 +40,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "nx build css-modules-theme",
+    "build": "vite build",
     "test": "nx test css-modules-theme"
   }
 }

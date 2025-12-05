@@ -41,7 +41,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "nx build vanilla-extract-theme",
+    "build": "vite build",
     "test": "nx test vanilla-extract-theme"
   }
 }

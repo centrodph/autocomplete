@@ -4,40 +4,17 @@ import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import linaria from '@linaria/vite';
 import * as path from 'path';
-import * as fs from 'fs';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
-
-/**
- * Reads TypeScript paths from tsconfig.base.json and converts them to babel-plugin-module-resolver format
- */
-function getBabelModuleResolverConfig() {
-  const tsconfigPath = path.resolve(__dirname, '../../tsconfig.base.json');
-  const tsconfig = JSON.parse(fs.readFileSync(tsconfigPath, 'utf-8'));
-  const paths = tsconfig.compilerOptions?.paths || {};
-  const baseUrl = tsconfig.compilerOptions?.baseUrl || '.';
-  const basePath = path.resolve(__dirname, '../../', baseUrl);
-
-  // Convert TypeScript paths to babel-plugin-module-resolver aliases
-  const alias: Record<string, string> = {};
-  for (const [key, value] of Object.entries(paths)) {
-    // TypeScript paths can have multiple values, take the first one
-    const tsPath = Array.isArray(value) ? value[0] : value;
-    // Remove the /* suffix if present for the alias key
-    const aliasKey = key.replace(/\/\*$/, '');
-    // Resolve the path relative to baseUrl
-    const resolvedPath = path.resolve(basePath, tsPath);
-    alias[aliasKey] = resolvedPath;
-  }
-
-  return {
-    root: [basePath],
-    alias,
-  };
-}
 
 export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/button-linaria',
+
+  resolve: {
+    alias: {
+      '@centrodphlibs/linaria-theme': path.resolve(__dirname, '../../packages/linaria-theme/src/index.ts'),
+    },
+  },
 
   plugins: [
     react(),
@@ -46,7 +23,15 @@ export default defineConfig({
       babelOptions: {
         presets: ['@babel/preset-typescript', '@babel/preset-react'],
         plugins: [
-          ['module-resolver', getBabelModuleResolverConfig()],
+          [
+            'module-resolver',
+            {
+              root: [path.resolve(__dirname, '../../')],
+              alias: {
+                '@centrodphlibs/linaria-theme': path.resolve(__dirname, '../../packages/linaria-theme/src/index.ts'),
+              },
+            },
+          ],
         ],
       },
     }),

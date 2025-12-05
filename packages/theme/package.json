@@ -35,7 +35,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "nx build theme",
+    "build": "vite build",
     "test": "nx test theme"
   }
 }

@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nx serve app --verbose",
     "build": "nx build app",
-    "build:all": "nx run-many -t build",
+    "build:all": "nx run-many -t build --verbose",
     "test": "nx test",
     "test:all": "nx run-many -t test",
     "prepare:publish": "node scripts/prepare-publish.js",
