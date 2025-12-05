@@ -9,6 +9,12 @@ export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/vanilla-extract-theme',
 
+  resolve: {
+    alias: {
+      '@centrodphlibs/theme': path.resolve(__dirname, '../../packages/theme/src/index.ts'),
+    },
+  },
+
   plugins: [
     vanillaExtractPlugin(),
     nxViteTsPaths(),

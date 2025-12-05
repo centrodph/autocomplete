@@ -1,6 +1,7 @@
 /**
  * Button component styles using CSS modules
  * Provides scoped CSS classes for button variants and sizes
+ * Uses CSS custom properties from @centrodphlibs/css-modules-theme
  */
 
 /* Base button styles */
@@ -20,7 +21,7 @@
 }
 
 .button:focus {
-  outline: 2px solid #0b21b4;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
@@ -32,73 +33,73 @@
 
 /* Button variants */
 .primary {
-  background-color: #0b21b4;
-  color: #ffffff;
+  background-color: var(--color-primary);
+  color: var(--color-background);
 }
 
 .primary:hover:not(:disabled) {
-  background-color: #0a1a9a;
+  background-color: var(--color-secondary);
 }
 
 .primary:active:not(:disabled) {
-  background-color: #081580;
+  background-color: var(--color-text-secondary);
 }
 
 .secondary {
-  background-color: #6c757d;
-  color: #ffffff;
+  background-color: var(--color-secondary);
+  color: var(--color-background);
 }
 
 .secondary:hover:not(:disabled) {
-  background-color: #5a6268;
+  background-color: var(--color-text-secondary);
 }
 
 .secondary:active:not(:disabled) {
-  background-color: #484f54;
+  background-color: var(--color-border);
 }
 
 .outline {
   background-color: transparent;
-  color: #0b21b4;
-  border: 2px solid #0b21b4;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .outline:hover:not(:disabled) {
-  background-color: #f0f4ff;
+  background-color: var(--color-surface);
 }
 
 .outline:active:not(:disabled) {
-  background-color: #e0e9ff;
+  background-color: var(--color-border);
 }
 
 .ghost {
   background-color: transparent;
-  color: #0b21b4;
+  color: var(--color-primary);
 }
 
 .ghost:hover:not(:disabled) {
-  background-color: #f0f4ff;
+  background-color: var(--color-surface);
 }
 
 .ghost:active:not(:disabled) {
-  background-color: #e0e9ff;
+  background-color: var(--color-border);
 }
 
 /* Button sizes */
 .small {
-  padding: 6px 12px;
+  padding: var(--spacing-m) var(--spacing-l);
   font-size: 14px;
   min-height: 32px;
 }
 
 .medium {
-  padding: 10px 20px;
+  padding: var(--spacing-l) calc(var(--spacing-l) * 5);
   font-size: 16px;
   min-height: 40px;
 }
 
 .large {
-  padding: 14px 28px;
+  padding: calc(var(--spacing-l) * 2.3) calc(var(--spacing-l) * 4.7);
   font-size: 18px;
   min-height: 48px;
 }

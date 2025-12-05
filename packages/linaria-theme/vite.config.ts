@@ -9,8 +9,31 @@ export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/linaria-theme',
 
+  resolve: {
+    alias: {
+      '@centrodphlibs/theme': path.resolve(__dirname, '../../packages/theme/src/index.ts'),
+    },
+  },
+
   plugins: [
-    linaria(),
+    linaria({
+      babelOptions: {
+        presets: [
+          ['@babel/preset-typescript', { allowNamespaces: true }],
+        ],
+        plugins: [
+          [
+            'module-resolver',
+            {
+              root: [path.resolve(__dirname, '../../')],
+              alias: {
+                '@centrodphlibs/theme': path.resolve(__dirname, '../../packages/theme/src/index.ts'),
+              },
+            },
+          ],
+        ],
+      },
+    }),
     nxViteTsPaths(),
     dts({
       entryRoot: 'src',

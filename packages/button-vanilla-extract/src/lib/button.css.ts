@@ -3,6 +3,7 @@
  * Provides type-safe, zero-runtime CSS for button variants and sizes
  */
 import { style, styleVariants } from '@vanilla-extract/css';
+import { themeTokens } from '@centrodphlibs/vanilla-extract-theme';
 
 /**
  * Base button style with common properties
@@ -21,7 +22,7 @@ const buttonBase = style({
   textDecoration: 'none',
   userSelect: 'none',
   ':focus': {
-    outline: '2px solid #0b21b4',
+    outline: `2px solid ${themeTokens.colors.primary}`,
     outlineOffset: '2px',
   },
   ':disabled': {
@@ -38,26 +39,26 @@ export const buttonVariants = styleVariants({
   primary: [
     buttonBase,
     {
-      backgroundColor: '#0b21b4',
-      color: '#ffffff',
+      backgroundColor: themeTokens.colors.primary,
+      color: themeTokens.colors.background,
       ':hover': {
-        backgroundColor: '#0a1a9a',
+        backgroundColor: themeTokens.colors.secondary,
       },
       ':active': {
-        backgroundColor: '#081580',
+        backgroundColor: themeTokens.colors.textSecondary,
       },
     },
   ],
   secondary: [
     buttonBase,
     {
-      backgroundColor: '#6c757d',
-      color: '#ffffff',
+      backgroundColor: themeTokens.colors.secondary,
+      color: themeTokens.colors.background,
       ':hover': {
-        backgroundColor: '#5a6268',
+        backgroundColor: themeTokens.colors.textSecondary,
       },
       ':active': {
-        backgroundColor: '#484f54',
+        backgroundColor: themeTokens.colors.border,
       },
     },
   ],
@@ -65,13 +66,13 @@ export const buttonVariants = styleVariants({
     buttonBase,
     {
       backgroundColor: 'transparent',
-      color: '#0b21b4',
-      border: '2px solid #0b21b4',
+      color: themeTokens.colors.primary,
+      border: `2px solid ${themeTokens.colors.primary}`,
       ':hover': {
-        backgroundColor: '#f0f4ff',
+        backgroundColor: themeTokens.colors.surface,
       },
       ':active': {
-        backgroundColor: '#e0e9ff',
+        backgroundColor: themeTokens.colors.border,
       },
     },
   ],
@@ -79,12 +80,12 @@ export const buttonVariants = styleVariants({
     buttonBase,
     {
       backgroundColor: 'transparent',
-      color: '#0b21b4',
+      color: themeTokens.colors.primary,
       ':hover': {
-        backgroundColor: '#f0f4ff',
+        backgroundColor: themeTokens.colors.surface,
       },
       ':active': {
-        backgroundColor: '#e0e9ff',
+        backgroundColor: themeTokens.colors.border,
       },
     },
   ],
@@ -95,17 +96,17 @@ export const buttonVariants = styleVariants({
  */
 export const buttonSizes = styleVariants({
   small: {
-    padding: '6px 12px',
+    padding: `${themeTokens.spacing.m} ${themeTokens.spacing.l}`,
     fontSize: '14px',
     minHeight: '32px',
   },
   medium: {
-    padding: '10px 20px',
+    padding: `${themeTokens.spacing.l} calc(${themeTokens.spacing.l} * 5)`,
     fontSize: '16px',
     minHeight: '40px',
   },
   large: {
-    padding: '14px 28px',
+    padding: `calc(${themeTokens.spacing.l} * 2.3) calc(${themeTokens.spacing.l} * 4.7)`,
     fontSize: '18px',
     minHeight: '48px',
   },

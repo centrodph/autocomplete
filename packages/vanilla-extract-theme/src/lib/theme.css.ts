@@ -2,56 +2,39 @@
  * Vanilla-extract theme tokens based on @centrodphlibs/theme
  * Creates CSS variables using vanilla-extract's createGlobalTheme API
  */
-import { createGlobalTheme } from '@vanilla-extract/css';
+import { createGlobalTheme, createThemeContract } from '@vanilla-extract/css';
 import { defaultTheme } from '@centrodphlibs/theme';
 
 /**
  * Global theme contract defining CSS variable names
  * This contract ensures type safety when accessing theme tokens
+ * createThemeContract creates a contract structure that createGlobalTheme expects
  */
-export const themeContract = {
+export const themeContract = createThemeContract({
   colors: {
-    primary: '',
-    secondary: '',
-    success: '',
-    warning: '',
-    error: '',
-    info: '',
-    background: '',
-    surface: '',
-    text: '',
-    textSecondary: '',
-    border: '',
+    primary: null,
+    secondary: null,
+    success: null,
+    warning: null,
+    error: null,
+    info: null,
+    background: null,
+    surface: null,
+    text: null,
+    textSecondary: null,
+    border: null,
   },
   spacing: {
-    s: '',
-    m: '',
-    l: '',
+    s: null,
+    m: null,
+    l: null,
   },
-};
+});
 
 /**
  * Global theme variables created from defaultTheme
  * These CSS variables are available globally and can be consumed by components
+ * createGlobalTheme creates CSS variables in :root and returns an object with CSS variable references
  */
-export const theme = createGlobalTheme(':root', themeContract, {
-  colors: {
-    primary: defaultTheme.colors.primary,
-    secondary: defaultTheme.colors.secondary,
-    success: defaultTheme.colors.success,
-    warning: defaultTheme.colors.warning,
-    error: defaultTheme.colors.error,
-    info: defaultTheme.colors.info,
-    background: defaultTheme.colors.background,
-    surface: defaultTheme.colors.surface,
-    text: defaultTheme.colors.text,
-    textSecondary: defaultTheme.colors.textSecondary,
-    border: defaultTheme.colors.border,
-  },
-  spacing: {
-    s: defaultTheme.spacing.s,
-    m: defaultTheme.spacing.m,
-    l: defaultTheme.spacing.l,
-  },
-});
+export const theme = createGlobalTheme(':root', themeContract, defaultTheme);
 

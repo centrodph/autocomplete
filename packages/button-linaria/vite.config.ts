@@ -10,12 +10,29 @@ export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/button-linaria',
 
+  resolve: {
+    alias: {
+      '@centrodphlibs/linaria-theme': path.resolve(__dirname, '../../packages/linaria-theme/src/index.ts'),
+    },
+  },
+
   plugins: [
     react(),
     linaria({
       include: ['**/*.{ts,tsx}'],
       babelOptions: {
         presets: ['@babel/preset-typescript', '@babel/preset-react'],
+        plugins: [
+          [
+            'module-resolver',
+            {
+              root: [path.resolve(__dirname, '../../')],
+              alias: {
+                '@centrodphlibs/linaria-theme': path.resolve(__dirname, '../../packages/linaria-theme/src/index.ts'),
+              },
+            },
+          ],
+        ],
       },
     }),
     nxViteTsPaths(),
@@ -44,7 +61,13 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      external: [
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
+        '@centrodphlibs/linaria-theme',
+        'linaria',
+      ],
       output: {
         // Ensure CSS is extracted and included
         assetFileNames: (assetInfo) => {

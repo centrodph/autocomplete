@@ -10,6 +10,13 @@ export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/button-vanilla-extract',
 
+  resolve: {
+    alias: {
+      '@centrodphlibs/vanilla-extract-theme': path.resolve(__dirname, '../../packages/vanilla-extract-theme/src/index.ts'),
+      '@centrodphlibs/theme': path.resolve(__dirname, '../../packages/theme/src/index.ts'),
+    },
+  },
+
   plugins: [
     react(),
     vanillaExtractPlugin(),
@@ -39,7 +46,13 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: ['react', 'react-dom', 'react/jsx-runtime', '@vanilla-extract/css'],
+      external: [
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
+        '@vanilla-extract/css',
+        '@centrodphlibs/vanilla-extract-theme',
+      ],
       output: {
         // Ensure CSS is extracted and included
         assetFileNames: (assetInfo) => {

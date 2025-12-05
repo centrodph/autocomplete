@@ -9,6 +9,12 @@ export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/button-css-modules',
 
+  resolve: {
+    alias: {
+      '@centrodphlibs/css-modules-theme': path.resolve(__dirname, '../../packages/css-modules-theme/src/index.ts'),
+    },
+  },
+
   plugins: [
     react(),
     nxViteTsPaths(),
@@ -37,7 +43,12 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      external: [
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
+        '@centrodphlibs/css-modules-theme',
+      ],
       output: {
         // Ensure CSS is extracted and included
         assetFileNames: (assetInfo) => {

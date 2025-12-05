@@ -1,5 +1,12 @@
 import React from 'react';
 import styles from './app.module.css';
+
+// Import theme packages - they include CSS imports in their index files
+// This ensures theme variables are available globally
+// import '@centrodphlibs/vanilla-extract-theme/style.css';
+// import '@centrodphlibs/linaria-theme/style.css';
+// import '@centrodphlibs/css-modules-theme/style.css';
+
 // Import components - CSS is automatically included via their index.ts files
 import { Button as ButtonVanillaExtract } from '@centrodphlibs/button-vanilla-extract';
 import { Button as ButtonLinaria } from '@centrodphlibs/button-linaria';

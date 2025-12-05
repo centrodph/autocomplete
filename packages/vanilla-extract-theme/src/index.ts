@@ -7,7 +7,7 @@
 // Note: Import without .ts extension - vite plugin resolves .css to .css.ts
 import './lib/theme.css';
 
-// Export theme and theme contract
+// Export theme (returned by createGlobalTheme) and theme contract
 export { theme, themeContract } from './lib/theme.css';
 
 // Export theme tokens for convenient access

@@ -3,6 +3,7 @@
  * Provides zero-runtime CSS-in-JS with compile-time extraction
  */
 import { css } from 'linaria';
+import { themeTokens } from '@centrodphlibs/linaria-theme';
 
 /**
  * Base button styles
@@ -22,7 +23,7 @@ export const buttonBase = css`
   user-select: none;
 
   &:focus {
-    outline: 2px solid #0b21b4;
+    outline: 2px solid ${themeTokens.colors.primary};
     outline-offset: 2px;
   }
 
@@ -38,52 +39,52 @@ export const buttonBase = css`
  */
 export const buttonVariants = {
   primary: css`
-    background-color: #0b21b4;
-    color: #ffffff;
+    background-color: ${themeTokens.colors.primary};
+    color: ${themeTokens.colors.background};
 
     &:hover:not(:disabled) {
-      background-color: #0a1a9a;
+      background-color: ${themeTokens.colors.secondary};
     }
 
     &:active:not(:disabled) {
-      background-color: #081580;
+      background-color: ${themeTokens.colors.textSecondary};
     }
   `,
   secondary: css`
-    background-color: #6c757d;
-    color: #ffffff;
+    background-color: ${themeTokens.colors.secondary};
+    color: ${themeTokens.colors.background};
 
     &:hover:not(:disabled) {
-      background-color: #5a6268;
+      background-color: ${themeTokens.colors.textSecondary};
     }
 
     &:active:not(:disabled) {
-      background-color: #484f54;
+      background-color: ${themeTokens.colors.border};
     }
   `,
   outline: css`
     background-color: transparent;
-    color: #0b21b4;
-    border: 2px solid #0b21b4;
+    color: ${themeTokens.colors.primary};
+    border: 2px solid ${themeTokens.colors.primary};
 
     &:hover:not(:disabled) {
-      background-color: #f0f4ff;
+      background-color: ${themeTokens.colors.surface};
     }
 
     &:active:not(:disabled) {
-      background-color: #e0e9ff;
+      background-color: ${themeTokens.colors.border};
     }
   `,
   ghost: css`
     background-color: transparent;
-    color: #0b21b4;
+    color: ${themeTokens.colors.primary};
 
     &:hover:not(:disabled) {
-      background-color: #f0f4ff;
+      background-color: ${themeTokens.colors.surface};
     }
 
     &:active:not(:disabled) {
-      background-color: #e0e9ff;
+      background-color: ${themeTokens.colors.border};
     }
   `,
 };
@@ -93,17 +94,17 @@ export const buttonVariants = {
  */
 export const buttonSizes = {
   small: css`
-    padding: 6px 12px;
+    padding: ${themeTokens.spacing.m} ${themeTokens.spacing.l};
     font-size: 14px;
     min-height: 32px;
   `,
   medium: css`
-    padding: 10px 20px;
+    padding: ${themeTokens.spacing.l} calc(${themeTokens.spacing.l} * 5);
     font-size: 16px;
     min-height: 40px;
   `,
   large: css`
-    padding: 14px 28px;
+    padding: calc(${themeTokens.spacing.l} * 2.3) calc(${themeTokens.spacing.l} * 4.7);
     font-size: 18px;
     min-height: 48px;
   `,

@@ -41,7 +41,7 @@
       }
     }
   ],
-  "defaultProject": "centrodphlibs",
+  "defaultProject": "app",
   "generators": {
     "@nx/react": {
       "application": {
