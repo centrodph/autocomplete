@@ -1,0 +1,10 @@
+{
+  "name": "css-modules-theme",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/css-modules-theme/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project css-modules-theme --web",
+  "targets": {}
+}
+

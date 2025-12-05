@@ -1,0 +1,14 @@
+*.tsbuildinfo
+*.spec.ts
+*.spec.tsx
+*.test.ts
+*.test.tsx
+vite.config.ts
+vitest.config.ts
+tsconfig.json
+tsconfig.lib.json
+tsconfig.spec.json
+project.json
+.nx
+node_modules
+

@@ -1,0 +1,48 @@
+{
+  "name": "@centrodphlibs/linaria-theme",
+  "version": "0.0.1",
+  "description": "Linaria theme tokens based on @centrodphlibs/theme",
+  "keywords": [
+    "linaria",
+    "theme",
+    "design-system",
+    "css-in-js",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./style.css": "./style.css"
+  },
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "style.css",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@centrodphlibs/theme": "^0.0.1",
+    "linaria": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "nx build linaria-theme",
+    "test": "nx test linaria-theme"
+  }
+}
+

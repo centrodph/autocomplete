@@ -1,0 +1,25 @@
+/**
+ * CSS modules theme tokens based on @centrodphlibs/theme
+ * Defines CSS custom properties (CSS variables) for consumption by CSS modules
+ */
+
+:root {
+  /* Colors */
+  --color-primary: #0b21b4;
+  --color-secondary: #6b7280;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+  --color-background: #ffffff;
+  --color-surface: #f9fafb;
+  --color-text: #111827;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e7eb;
+
+  /* Spacing */
+  --spacing-s: 2px;
+  --spacing-m: 4px;
+  --spacing-l: 6px;
+}
+

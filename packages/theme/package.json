@@ -1,0 +1,42 @@
+{
+  "name": "@centrodphlibs/theme",
+  "version": "0.0.1",
+  "description": "Theme data package with colors and spacing units for design systems",
+  "keywords": [
+    "theme",
+    "design-system",
+    "colors",
+    "spacing",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js",
+      "types": "./index.d.ts"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "nx build theme",
+    "test": "nx test theme"
+  }
+}
+

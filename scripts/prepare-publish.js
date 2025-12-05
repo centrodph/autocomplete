@@ -13,13 +13,13 @@ const path = require('path');
  * List of packages to prepare for publishing
  */
 const packages = [
-  'autocomplete',
-  'highlight',
-  'menu',
-  'menuitem',
   'button-vanilla-extract',
   'button-linaria',
   'button-css-modules',
+  'theme',
+  'vanilla-extract-theme',
+  'linaria-theme',
+  'css-modules-theme',
 ];
 
 /**

@@ -15,13 +15,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@centrodphlibs/autocomplete": ["packages/autocomplete/src/index.ts"],
-      "@centrodphlibs/highlight": ["packages/highlight/src/index.ts"],
-      "@centrodphlibs/menu": ["packages/menu/src/index.ts"],
-      "@centrodphlibs/menuitem": ["packages/menuitem/src/index.ts"],
       "@centrodphlibs/button-vanilla-extract": ["packages/button-vanilla-extract/src/index.ts"],
       "@centrodphlibs/button-linaria": ["packages/button-linaria/src/index.ts"],
-      "@centrodphlibs/button-css-modules": ["packages/button-css-modules/src/index.ts"]
+      "@centrodphlibs/button-css-modules": ["packages/button-css-modules/src/index.ts"],
+      "@centrodphlibs/theme": ["packages/theme/src/index.ts"],
+      "@centrodphlibs/vanilla-extract-theme": ["packages/vanilla-extract-theme/src/index.ts"],
+      "@centrodphlibs/linaria-theme": ["packages/linaria-theme/src/index.ts"],
+      "@centrodphlibs/css-modules-theme": ["packages/css-modules-theme/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

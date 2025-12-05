@@ -1,9 +1,0 @@
-{
-  "name": "autocomplete",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/autocomplete/src",
-  "projectType": "library",
-  "tags": [],
-  "// targets": "to see all targets run: nx show project autocomplete --web",
-  "targets": {}
-}
