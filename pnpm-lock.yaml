@@ -162,6 +162,18 @@ importers:
       '@centrodphlibs/button-vanilla-extract':
         specifier: workspace:*
         version: link:../../packages/button-vanilla-extract
+      '@centrodphlibs/css-modules-theme':
+        specifier: workspace:*
+        version: link:../../packages/css-modules-theme
+      '@centrodphlibs/linaria-theme':
+        specifier: workspace:*
+        version: link:../../packages/linaria-theme
+      '@centrodphlibs/theme':
+        specifier: workspace:*
+        version: link:../../packages/theme
+      '@centrodphlibs/vanilla-extract-theme':
+        specifier: workspace:*
+        version: link:../../packages/vanilla-extract-theme
       react:
         specifier: 18.2.0
         version: 18.2.0

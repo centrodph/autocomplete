@@ -3,6 +3,9 @@
  * This package provides CSS custom properties based on @centrodphlibs/theme
  */
 
+// Import CSS file so Vite processes and includes it in the build
+import './lib/theme.css';
+
 // Export CSS file path (consumers should import this)
 export const themeCssPath = './style.css';
 

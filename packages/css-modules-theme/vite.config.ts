@@ -30,22 +30,34 @@ export default defineConfig({
       // Don't forget to update your package.json as well.
       formats: ['es', 'cjs'],
     },
+
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: ['@centrodphlibs/theme'],
+      external: [
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
+        '@centrodphlibs/theme',
+      ],
       output: {
-        // Ensure CSS is extracted and included
+        /**
+         * Configure asset file names to ensure CSS is output to the correct location.
+         * Since cssCodeSplit is false, all CSS will be bundled into a single file.
+         * We need to output it to lib/theme.css to match the package.json export path.
+         */
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'style.css') {
-            return 'style.css';
+          // All CSS files (with cssCodeSplit: false, there should only be one)
+          // should be output to lib/theme.css as expected by package.json exports
+          if (assetInfo.name && assetInfo.name.endsWith('.css')) {
+            return 'lib/theme.css';
           }
+          // For other assets (images, fonts, etc.), preserve their original names
           return assetInfo.name || 'asset';
         },
       },
     },
     cssCodeSplit: false, // Bundle all CSS into a single file
   },
-
   test: {
     globals: true,
     environment: 'jsdom',
@@ -58,4 +70,3 @@ export default defineConfig({
     },
   },
 });
-
