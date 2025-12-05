@@ -50,8 +50,8 @@ autocomplete/
 
 ### Prerequisites
 
-- **Node.js**: Version 18.x or higher
-- **pnpm**: Version 8.x or higher (required for workspace management)
+- **Node.js**: Version 22.16.0 (specified in `.nvmrc`)
+- **pnpm**: Version 10.12.1 or higher (required for workspace management)
 
 ### Installation
 
@@ -61,7 +61,13 @@ autocomplete/
    cd autocomplete
    ```
 
-2. Install dependencies:
+2. Switch to the correct Node.js version (if using nvm):
+   ```bash
+   nvm use
+   ```
+   This will automatically use the version specified in `.nvmrc` (v22.16.0).
+
+3. Install dependencies:
    ```bash
    pnpm install
    ```
