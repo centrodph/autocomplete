@@ -58,7 +58,7 @@ autocomplete/
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd autocomplete
+   cd styled-components-migration
    ```
 
 2. Switch to the correct Node.js version (if using nvm):
@@ -352,17 +352,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Vite Documentation](https://vitejs.dev)
 - [React Documentation](https://react.dev)
 - [Vitest Documentation](https://vitest.dev)
-
-## 📊 Project Graph
-
-The project dependency graph can be visualized using Nx:
-
-```bash
-nx graph
-```
-
-<img src="./environments/app/public/graph.1.png" alt="Project Dependency Graph" />
-
----
 
 **Built with ❤️ using Nx, React, and modern CSS-in-JS solutions**
