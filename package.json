@@ -73,5 +73,6 @@
   },
   "nx": {
     "includedScripts": []
-  }
+  },
+  "workspaces": ["packages/*"]
 }

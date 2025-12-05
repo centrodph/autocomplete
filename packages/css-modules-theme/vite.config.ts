@@ -8,12 +8,6 @@ export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/css-modules-theme',
 
-  resolve: {
-    alias: {
-      '@centrodphlibs/theme': path.resolve(__dirname, '../../packages/theme/src/index.ts'),
-    },
-  },
-
   plugins: [
     nxViteTsPaths(),
     dts({
