@@ -4,7 +4,11 @@
   "sourceRoot": "packages/button-vanilla-extract/src",
   "projectType": "library",
   "tags": [],
-  "// targets": "to see all targets run: nx show project button-vanilla-extract --web",
-  "targets": {}
+  "targets": {
+    "build": {
+      "dependsOn": ["^build"],
+      "cache": true
+    }
+  }
 }
 

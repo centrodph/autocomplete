@@ -16,36 +16,35 @@
     "type": "git",
     "url": ""
   },
-  "main": "./index.js",
-  "types": "./index.d.ts",
-  "module": "./index.mjs",
+  "type": "module",
+  "module": "./dist/index.js",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./index.mjs",
-      "require": "./index.js",
-      "types": "./index.d.ts"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
     },
-    "./style.css": "./style.css"
+    "./style.css": "./dist/style.css"
   },
-  "files": [
-    "index.js",
-    "index.mjs",
-    "index.d.ts",
-    "style.css",
-    "README.md"
-  ],
+  "files": [],
+  "dependencies": {
+    "@centrodphlibs/vanilla-extract-theme": "workspace:*"
+  },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0",
-    "@centrodphlibs/vanilla-extract-theme": "^0.0.1",
     "@vanilla-extract/css": "^1.0.0"
+  },
+  "devDependencies": {
+    "vite": "~5.0.0"
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "nx build button-vanilla-extract",
+    "build": "vite build",
     "test": "nx test button-vanilla-extract"
   }
 }
-

@@ -8,13 +8,6 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/packages/button-linaria',
-
-  resolve: {
-    alias: {
-      '@centrodphlibs/linaria-theme': path.resolve(__dirname, '../../packages/linaria-theme/src/index.ts'),
-    },
-  },
 
   plugins: [
     react(),
@@ -22,17 +15,6 @@ export default defineConfig({
       include: ['**/*.{ts,tsx}'],
       babelOptions: {
         presets: ['@babel/preset-typescript', '@babel/preset-react'],
-        plugins: [
-          [
-            'module-resolver',
-            {
-              root: [path.resolve(__dirname, '../../')],
-              alias: {
-                '@centrodphlibs/linaria-theme': path.resolve(__dirname, '../../packages/linaria-theme/src/index.ts'),
-              },
-            },
-          ],
-        ],
       },
     }),
     nxViteTsPaths(),
@@ -45,7 +27,7 @@ export default defineConfig({
   // Configuration for building your library.
   // See: https://vitejs.dev/guide/build.html#library-mode
   build: {
-    outDir: '../../dist/packages/button-linaria',
+    outDir: './dist',
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,

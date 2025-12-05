@@ -1,0 +1,10 @@
+packages:
+  - packages/*
+  - environments/*
+
+onlyBuiltDependencies:
+  - '@swc/core'
+  - cypress
+  - esbuild
+  - fsevents
+  - nx

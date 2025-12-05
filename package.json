@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve app --verbose",
-    "build": "nx build app",
-    "build:all": "nx run-many -t build --verbose",
+    "start": "nx run app:dev",
+    "build": "nx run app:build",
+    "build:all": "nx run-many -t build",
     "test": "nx test",
     "test:all": "nx run-many -t test",
     "prepare:publish": "node scripts/prepare-publish.js",
@@ -73,6 +73,5 @@
   },
   "nx": {
     "includedScripts": []
-  },
-  "workspaces": ["packages/*"]
+  }
 }

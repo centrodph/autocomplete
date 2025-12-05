@@ -7,30 +7,12 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../node_modules/.vite/packages/linaria-theme',
-
-  resolve: {
-    alias: {
-      '@centrodphlibs/theme': path.resolve(__dirname, '../../packages/theme/src/index.ts'),
-    },
-  },
 
   plugins: [
     linaria({
       babelOptions: {
         presets: [
           ['@babel/preset-typescript', { allowNamespaces: true }],
-        ],
-        plugins: [
-          [
-            'module-resolver',
-            {
-              root: [path.resolve(__dirname, '../../')],
-              alias: {
-                '@centrodphlibs/theme': path.resolve(__dirname, '../../packages/theme/src/index.ts'),
-              },
-            },
-          ],
         ],
       },
     }),
@@ -44,7 +26,7 @@ export default defineConfig({
   // Configuration for building your library.
   // See: https://vitejs.dev/guide/build.html#library-mode
   build: {
-    outDir: '../../dist/packages/linaria-theme',
+    outDir: './dist',
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,

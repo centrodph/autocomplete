@@ -4,7 +4,11 @@
   "sourceRoot": "packages/css-modules-theme/src",
   "projectType": "library",
   "tags": [],
-  "// targets": "to see all targets run: nx show project css-modules-theme --web",
-  "targets": {}
+  "targets": {
+    "build": {
+      "dependsOn": ["^build"],
+      "cache": true
+    }
+  }
 }
 

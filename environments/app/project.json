@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/app/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "dev": {
+      "dependsOn": ["^build"],
+      "inputs": ["{projectRoot}/src/**/*","{projectRoot}/node_modules/**/*"],
+      "cache": true
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["{projectRoot}/src/**/*","{projectRoot}/node_modules/**/*"],
+      "cache": true
+    }
+  }
+}
