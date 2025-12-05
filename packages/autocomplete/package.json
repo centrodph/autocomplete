@@ -1,6 +1,6 @@
 {
   "name": "@centrodphlibs/autocomplete",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "React autocomplete component library",
   "keywords": [
     "react",
