@@ -49,6 +49,16 @@ export declare namespace ButtonNamespace {
      * Additional CSS class name
      */
     className?: string;
+
+    /**
+     * Padding
+     */
+    p?: 's' | 'm' | 'l';
+
+    /**
+     * Margin
+     */
+    m?: 's' | 'm' | 'l';
   }
 }
 

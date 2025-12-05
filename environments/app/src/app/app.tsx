@@ -1,16 +1,17 @@
 import React from 'react';
 import styles from './app.module.css';
-
-// Import theme packages - they include CSS imports in their index files
-// This ensures theme variables are available globally
+import { Button as ButtonVanillaExtract } from '@centrodphlibs/button-vanilla-extract';
+import { Button as ButtonLinaria } from '@centrodphlibs/button-linaria';
+import { Button as ButtonCssModules } from '@centrodphlibs/button-css-modules';
+import '@centrodphlibs/button-css-modules/style.css';
+import '@centrodphlibs/button-linaria/style.css';
+import '@centrodphlibs/button-vanilla-extract/style.css';
 import '@centrodphlibs/vanilla-extract-theme/style.css';
 import '@centrodphlibs/linaria-theme/style.css';
 import '@centrodphlibs/css-modules-theme/style.css';
 
-// Import components - CSS is automatically included via their index.ts files
-import { Button as ButtonVanillaExtract } from '@centrodphlibs/button-vanilla-extract';
-import { Button as ButtonLinaria } from '@centrodphlibs/button-linaria';
-import { Button as ButtonCssModules } from '@centrodphlibs/button-css-modules';
+
+
 
 export function App() {
   return (
@@ -27,7 +28,7 @@ export function App() {
             Type-safe, zero-runtime CSS-in-TypeScript
           </p>
           <div className={styles['button-group']}>
-            <ButtonVanillaExtract variant="primary" size="small">
+            <ButtonVanillaExtract variant="primary" size="small" p="s">
               Primary Small
             </ButtonVanillaExtract>
             <ButtonVanillaExtract variant="primary" size="medium">
